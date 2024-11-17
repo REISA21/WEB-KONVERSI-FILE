@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reisa Convert - PDF to Word</title>
+    <!-- Tautan CSS yang diperbarui -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo-text">
+                <span>Reisa</span>
+                <span>Convert</span>
+            </h1>
+            <nav>
+                <a href="/" class="nav-home">Home</a>
+                <a href="/explore.html" class="nav-explore">Explore Files</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero page-two">
+        <div class="content">
+            <div class="text-container">
+                <h2>Convert File PDF to Word</h2>
+            </div>
+            <div class="file-selector">
+                <input type="file" id="pdfFileInput" accept=".pdf" style="display: none;">
+                <button onclick="triggerFileSelection()">Open File</button>
+            </div>
+            <div id="downloadLinkContainer"></div>
+        </div>
+        
+        <div class="image-container">
+            <!-- Path gambar diperbarui untuk folder images -->
+            <img src="{{ url_for('static', filename='images/bk2.png') }}" alt="Team working">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Reisa Convert. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Tautan JavaScript yang diperbarui -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

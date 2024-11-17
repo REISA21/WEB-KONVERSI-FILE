@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reisa Convert - Explore Files</title>
+    <!-- Menggunakan `url_for` untuk mengakses CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo-text">
+                <span>Reisa</span>
+                <span>Convert</span>
+            </h1>
+            <nav>
+                <!-- Menggunakan `url_for` untuk tautan halaman utama dan explore -->
+                <a href="{{ url_for('index') }}" class="nav-home">Home</a>
+                <a href="{{ url_for('explore') }}" class="nav-explore active">Explore Files</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="explore-files">
+        <h2>Convert various file types</h2>
+        <div class="file-grid">
+            <div class="file-type">PDF To WORD <a href="{{ url_for('pdf_to_word_page') }}" class="select-button">SELECT FILE</a></div>
+            <div class="file-type">WORD To PDF <a href="{{ url_for('word_to_pdf_page') }}" class="select-button">SELECT FILE</a></div>
+            <div class="file-type">EXCEL To PDF <a href="{{ url_for('excel_to_pdf_page') }}" class="select-button">SELECT FILE</a></div>
+            <div class="file-type">PDF To EXCEL <a href="{{ url_for('pdf_to_excel_page') }}" class="select-button">SELECT FILE</a></div>
+            <div class="file-type">PowerPoint To PDF <a href="{{ url_for('ppt_to_pdf_page') }}" class="select-button">SELECT FILE</a></div>
+            <div class="file-type">PDF To PowerPoint <a href="{{ url_for('pdf_to_ppt_page') }}" class="select-button">SELECT FILE</a></div>
+            <div class="file-type">WORD To TXT <a href="{{ url_for('word_to_txt_page') }}" class="select-button">SELECT FILE</a></div>
+            <div class="file-type">TXT To WORD <a href="{{ url_for('txt_to_word_page') }}" class="select-button">SELECT FILE</a></div>
+            <div class="file-type">TXT To PDF <a href="{{ url_for('txt_to_pdf_page') }}" class="select-button">SELECT FILE</a></div>
+            <div class="file-type">PDF To TXT <a href="{{ url_for('pdf_to_txt_page') }}" class="select-button">SELECT FILE</a></div>
+            <div class="file-type">JPG To PNG <a href="{{ url_for('jpg_to_png_page') }}" class="select-button">SELECT FILE</a></div>
+            <div class="file-type">PNG To JPG <a href="{{ url_for('png_to_jpg_page') }}" class="select-button">SELECT FILE</a></div>
+            <div class="file-type">HEIC To JPG <a href="{{ url_for('heic_to_jpg_page') }}" class="select-button">SELECT FILE</a></div>
+            <div class="file-type">ePub To PDF <a href="{{ url_for('epub_to_pdf_page') }}" class="select-button">SELECT FILE</a></div>
+            <div class="file-type">PDF To ePub <a href="{{ url_for('pdf_to_epub_page') }}" class="select-button">SELECT FILE</a></div>
+            <div class="file-type">RAR To ZIP <a href="{{ url_for('rar_to_zip_page') }}" class="select-button">SELECT FILE</a></div>
+            <div class="file-type">EXCEL To CSV <a href="{{ url_for('excel_to_csv_page') }}" class="select-button">SELECT FILE</a></div>
+            <div class="file-type">CSV To EXCEL <a href="{{ url_for('csv_to_excel_page') }}" class="select-button">SELECT FILE</a></div>
+            <div class="file-type">JSON To CSV <a href="{{ url_for('json_to_csv_page') }}" class="select-button">SELECT FILE</a></div>
+            <div class="file-type">JSON To XML <a href="{{ url_for('json_to_xml_page') }}" class="select-button">SELECT FILE</a></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Reisa Convert. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

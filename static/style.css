@@ -1,0 +1,2494 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #007D59; /* Warna latar belakang hijau */
+    color: white;
+}
+
+/* Container untuk header */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Styling untuk logo teks "Reisa Convert" */
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1; /* Mengurangi jarak antar baris */
+    color: white;
+}
+
+.logo-text span {
+    display: block; /* Menampilkan setiap kata di baris baru */
+    text-align: left; /* Rata kiri */
+}
+
+/* Styling untuk navigasi */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.nav-home {
+    font-size: 1rem; /* Ukuran normal untuk "Home" */
+    font-weight: normal;
+}
+
+.nav-explore {
+    font-size: 1.2rem; /* Ukuran lebih besar untuk "Explore Files" */
+    font-weight: bold; /* Tebal untuk menonjolkan teks */
+}
+
+/* Bagian Hero (Umum, berlaku di kedua halaman) */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    text-align: center;
+    position: relative;
+    padding: 40px;
+}
+
+/* Konten utama di hero */
+.content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Styling untuk gambar dalam lingkaran */
+.image-container {
+    position: relative;
+    border: 8px solid #00A76B;
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Logo overlay di bagian bawah gambar */
+.logo-overlay {
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    background-color: white;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-overlay img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Text container di hero */
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.text-container h2 {
+    font-size: 1.3rem;
+    background-color: #fff;
+    color: #007D59;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.text-container h3 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #00945E;
+}
+
+/* Styling untuk navigasi titik (dots) */
+.navigation-dots {
+    position: absolute;
+    display: flex;
+    gap: 8px;
+}
+
+.navigation-dots.left {
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    flex-direction: column;
+}
+
+.navigation-dots.right {
+    bottom: 20px;
+    right: 10px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+/* Gaya khusus halaman kedua */
+.hero.page-two {
+    display: flex;
+    flex-direction: row; /* Mengatur agar konten sejajar horizontal */
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 60px 20px;
+    gap: 50px; /* Jarak antara konten teks dan gambar */
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Konten utama di halaman kedua */
+.page-two .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Mengatur teks dan elemen di tengah secara horizontal */
+    gap: 15px;
+}
+
+/* Judul utama dengan teks putih tanpa background */
+.page-two .text-container h2 {
+    font-size: 3rem; /* Ukuran font besar untuk judul */
+    font-weight: bold;
+    color: #FFFFFF; /* Pastikan teks putih agar terlihat di background hijau */
+    background: none; /* Tidak ada background */
+    margin: 0;
+    line-height: 1.2;
+    text-align: center; /* Menengahkan teks dalam judul */
+}
+
+/* Kotak pilihan file dengan border dan background */
+.page-two .file-selector {
+    background-color: #ffffff;
+    color: #007D59;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    border: 2px solid #007D59; /* Border hijau */
+    margin: 0 auto 15px auto; /* Memusatkan elemen dan menambahkan margin bawah */
+}
+
+/* Tombol "Open File" */
+.page-two button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 auto; /* Memusatkan tombol */
+}
+
+.page-two button:hover {
+    background-color: #00945E;
+}
+
+/* Gambar lingkaran di halaman kedua */
+.page-two .image-container {
+    position: relative;
+    border: 8px solid #00A76B;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.page-two .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Gaya khusus halaman ketiga */
+.hero.page-three {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 60px 20px;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Konten utama di halaman ketiga */
+.page-three .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Judul utama dengan teks putih tanpa background */
+.page-three .text-container h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF; /* Pastikan teks putih agar terlihat di background hijau */
+    margin: 0;
+    line-height: 1.2;
+    text-align: left;
+    background: none; /* Tidak ada background */
+    padding: 0;
+}
+
+/* Kotak pilihan file dengan border dan background */
+.page-three .file-selector {
+    background-color: #ffffff;
+    color: #007D59;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    border: 2px solid #007D59;
+    margin: 0 auto 15px auto;
+}
+
+/* Tombol "Open File" */
+.page-three button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.page-three button:hover {
+    background-color: #00945E;
+}
+
+/* Gambar lingkaran di halaman ketiga */
+.page-three .image-container {
+    position: relative;
+    border: 8px solid #00A76B;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.page-three .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007D59;
+}
+
+/* Gaya khusus halaman keempat */
+.hero.page-four {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 60px 20px;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Konten utama di halaman keempat */
+.page-four .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Judul utama dengan teks putih tanpa background */
+.page-four .text-container h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF; /* Pastikan teks putih agar terlihat di background hijau */
+    margin: 0;
+    line-height: 1.2;
+    text-align: left;
+    background: none; /* Tidak ada background */
+    padding: 0;
+}
+
+/* Kotak pilihan file dengan border dan background */
+.page-four .file-selector {
+    background-color: #ffffff;
+    color: #007D59;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    border: 2px solid #007D59;
+    margin: 0 auto 15px auto;
+}
+
+/* Tombol "Open File" */
+.page-four button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.page-four button:hover {
+    background-color: #00945E;
+}
+
+/* Gambar lingkaran di halaman keempat */
+.page-four .image-container {
+    position: relative;
+    border: 8px solid #00A76B;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.page-four .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007D59;
+}
+
+/* Gaya khusus halaman kelima */
+.hero.page-five {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 60px 20px;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Konten utama di halaman kelima */
+.page-five .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Judul utama dengan teks putih tanpa background */
+.page-five .text-container h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF; /* Pastikan teks putih agar terlihat di background hijau */
+    margin: 0;
+    line-height: 1.2;
+    text-align: left;
+    background: none; /* Tidak ada background */
+    padding: 0;
+}
+
+/* Kotak pilihan file dengan border dan background */
+.page-five .file-selector {
+    background-color: #ffffff;
+    color: #007D59;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    border: 2px solid #007D59;
+    margin: 0 auto 15px auto;
+}
+
+/* Tombol "Open File" */
+.page-five button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.page-five button:hover {
+    background-color: #00945E;
+}
+
+/* Gambar lingkaran di halaman kelima */
+.page-five .image-container {
+    position: relative;
+    border: 8px solid #00A76B;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.page-five .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007D59;
+}
+
+
+/* Gaya khusus halaman keenam tanpa gambar */
+.hero.page-six {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90vh;
+    background-color: #007D59; /* Sesuaikan warna latar belakang */
+}
+
+/* Konten utama yang ditempatkan di tengah untuk halaman keenam */
+.page-six .content-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Judul utama dengan teks besar tanpa background */
+.page-six h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF; /* Teks putih untuk kontras dengan background hijau */
+    margin: 0;
+    line-height: 1.2;
+    text-align: center;
+    background: none;
+    padding: 0;
+}
+
+/* Kotak pilihan file dengan border dan background */
+.page-six .file-selector {
+    background-color: #ffffff;
+    color: #007D59;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #007D59;
+}
+
+/* Tombol "Open File" */
+.page-six button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.page-six button:hover {
+    background-color: #00945E;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007D59;
+}
+
+/* Dekorasi latar belakang halaman */
+.hero.page-six::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: 30%;
+    left: 20%;
+    z-index: 0;
+}
+
+.hero.page-six::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 15%;
+    z-index: 0;
+}
+/* Gaya khusus halaman ketujuh */
+.hero.page-seven {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90vh;
+    background-color: #007D59; /* Sesuaikan warna latar belakang */
+}
+
+/* Konten utama yang ditempatkan di tengah untuk halaman ketujuh */
+.page-seven .content-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Judul utama dengan teks besar tanpa background */
+.page-seven h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF; /* Teks putih untuk kontras dengan background hijau */
+    margin: 0;
+    line-height: 1.2;
+    text-align: center;
+    background: none;
+    padding: 0;
+}
+
+/* Kotak pilihan file dengan border dan background */
+.page-seven .file-selector {
+    background-color: #ffffff;
+    color: #007D59;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #007D59;
+    margin: 0 auto 15px auto;
+}
+
+/* Tombol "Open File" */
+.page-seven button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.page-seven button:hover {
+    background-color: #00945E;
+}
+
+/* Dekorasi latar belakang halaman */
+.hero.page-seven::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: 30%;
+    left: 20%;
+    z-index: 0;
+}
+
+.hero.page-seven::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 15%;
+    z-index: 0;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007D59;
+}
+/* Gaya khusus halaman kedelapan */
+.hero.page-eight {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 60px 20px;
+    gap: 50px; /* Jarak antara konten teks dan gambar */
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 90vh;
+    background-color: #007D59; /* Warna latar belakang */
+    position: relative;
+}
+
+/* Konten utama di halaman kedelapan */
+.page-eight .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Menempatkan konten di tengah */
+    gap: 20px;
+}
+
+/* Judul utama dengan teks besar */
+.page-eight .text-container h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.2;
+    background: none;
+}
+
+/* Kotak pilihan file dengan border dan background */
+.page-eight .file-selector {
+    background-color: #ffffff;
+    color: #007D59;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    border: 2px solid #007D59;
+    margin-bottom: 15px; /* Memberi jarak di bawah */
+}
+
+/* Tombol "Open File" */
+.page-eight button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px; /* Jarak antara tombol dan kotak pilihan file */
+    text-align: center;
+}
+
+.page-eight button:hover {
+    background-color: #00945E;
+}
+
+/* Gambar lingkaran di halaman kedelapan */
+.page-eight .image-container {
+    position: relative;
+    border: 8px solid #00A76B;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.page-eight .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Dekorasi latar belakang */
+.hero.page-eight::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: 30%;
+    left: 10%;
+    z-index: 0;
+}
+
+.hero.page-eight::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 15%;
+    z-index: 0;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007D59;
+}
+/* Gaya khusus halaman kesembilan */
+.hero.page-nine {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 60px 20px;
+    gap: 50px; /* Jarak antara konten teks dan gambar */
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 90vh;
+    background-color: #007D59; /* Warna latar belakang */
+    position: relative;
+}
+
+/* Konten utama di halaman kesembilan */
+.page-nine .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Menempatkan konten di tengah */
+    gap: 20px;
+}
+
+/* Judul utama dengan teks besar */
+.page-nine .text-container h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.2;
+    background: none;
+}
+
+/* Kotak pilihan file dengan border dan background */
+.page-nine .file-selector {
+    background-color: #ffffff;
+    color: #007D59;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    border: 2px solid #007D59;
+    margin-bottom: 15px; /* Memberi jarak di bawah */
+}
+
+/* Tombol "Open File" */
+.page-nine button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px; /* Jarak antara tombol dan kotak pilihan file */
+    text-align: center;
+}
+
+.page-nine button:hover {
+    background-color: #00945E;
+}
+
+/* Gambar lingkaran di halaman kesembilan */
+.page-nine .image-container {
+    position: relative;
+    border: 8px solid #00A76B;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.page-nine .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Dekorasi latar belakang */
+.hero.page-nine::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: 30%;
+    left: 10%;
+    z-index: 0;
+}
+
+.hero.page-nine::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 15%;
+    z-index: 0;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007D59;
+}
+/* Gaya khusus halaman kesepuluh */
+.hero.page-ten {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 90vh;
+    background-color: #007D59; /* Warna latar belakang */
+    position: relative;
+}
+
+/* Konten utama di halaman kesepuluh */
+.page-ten .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Judul utama dengan teks besar */
+.page-ten .text-container h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.2;
+    background: none;
+}
+
+/* Kotak pilihan file dengan border dan background */
+.page-ten .file-selector {
+    background-color: #ffffff;
+    color: #007D59;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    border: 2px solid #007D59;
+    margin-bottom: 15px; /* Jarak antara file-selector dan button */
+}
+
+/* Tombol "Open File" */
+.page-ten button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.page-ten button:hover {
+    background-color: #00945E;
+}
+
+/* Dekorasi latar belakang */
+.hero.page-ten::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: 30%;
+    left: 10%;
+    z-index: 0;
+}
+
+.hero.page-ten::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 15%;
+    z-index: 0;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007D59;
+}
+/* Gaya khusus halaman kesebelas */
+.hero.page-eleven {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 90vh;
+    background-color: #007D59; /* Warna latar belakang */
+    position: relative;
+}
+
+/* Konten utama di halaman kesebelas */
+.page-eleven .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Judul utama dengan teks besar */
+.page-eleven .text-container h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.2;
+    background: none;
+}
+
+/* Kotak pilihan file dengan border dan background */
+.page-eleven .file-selector {
+    background-color: #ffffff;
+    color: #007D59;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    border: 2px solid #007D59;
+    margin-bottom: 15px; /* Jarak antara file-selector dan button */
+}
+
+/* Tombol "Open File" */
+.page-eleven button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.page-eleven button:hover {
+    background-color: #00945E;
+}
+
+/* Dekorasi latar belakang */
+.hero.page-eleven::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: 30%;
+    left: 10%;
+    z-index: 0;
+}
+
+.hero.page-eleven::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 15%;
+    z-index: 0;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007D59;
+}
+/* Gaya khusus halaman keduabelas */
+.hero.page-twelve {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 90vh;
+    background-color: #007D59; /* Warna latar belakang */
+    position: relative;
+}
+
+/* Konten utama di halaman keduabelas */
+.page-twelve .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Judul utama dengan teks besar */
+.page-twelve .text-container h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.2;
+    background: none;
+}
+
+/* Kotak pilihan file dengan border dan background */
+.page-twelve .file-selector {
+    background-color: #ffffff;
+    color: #007D59;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    border: 2px solid #007D59;
+    margin-bottom: 15px; /* Jarak antara file-selector dan button */
+}
+
+/* Tombol "Open File" */
+.page-twelve button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.page-twelve button:hover {
+    background-color: #00945E;
+}
+
+/* Dekorasi latar belakang */
+.hero.page-twelve::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: 30%;
+    left: 10%;
+    z-index: 0;
+}
+
+.hero.page-twelve::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 15%;
+    z-index: 0;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007D59;
+}
+/* Gaya khusus halaman ketigabelas */
+.hero.page-thirteen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 90vh;
+    background-color: #007D59; /* Warna latar belakang */
+    position: relative;
+}
+
+/* Konten utama di halaman ketigabelas */
+.page-thirteen .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Judul utama dengan teks besar */
+.page-thirteen .text-container h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.2;
+    background: none;
+}
+
+/* Kotak pilihan file dengan border dan background */
+.page-thirteen .file-selector {
+    background-color: #ffffff;
+    color: #007D59;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    border: 2px solid #007D59;
+    margin-bottom: 15px; /* Jarak antara file-selector dan button */
+}
+
+/* Tombol "Open File" */
+.page-thirteen button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.page-thirteen button:hover {
+    background-color: #00945E;
+}
+
+/* Dekorasi latar belakang */
+.hero.page-thirteen::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: 30%;
+    left: 10%;
+    z-index: 0;
+}
+
+.hero.page-thirteen::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 15%;
+    z-index: 0;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007D59;
+}
+/* Gaya khusus halaman keempatbelas */
+.hero.page-fourteen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 90vh;
+    background-color: #007D59; /* Warna latar belakang */
+    position: relative;
+}
+
+/* Konten utama di halaman keempatbelas */
+.page-fourteen .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Judul utama dengan teks besar */
+.page-fourteen .text-container h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.2;
+    background: none;
+}
+
+/* Kotak pilihan file dengan border dan background */
+.page-fourteen .file-selector {
+    background-color: #ffffff;
+    color: #007D59;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    border: 2px solid #007D59;
+    margin-bottom: 15px; /* Jarak antara file-selector dan button */
+}
+
+/* Tombol "Open File" */
+.page-fourteen button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.page-fourteen button:hover {
+    background-color: #00945E;
+}
+
+/* Dekorasi latar belakang */
+.hero.page-fourteen::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: 30%;
+    left: 10%;
+    z-index: 0;
+}
+
+.hero.page-fourteen::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 15%;
+    z-index: 0;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007D59;
+}
+/* Gaya khusus halaman kelima belas */
+.hero.page-fifteen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 90vh;
+    background-color: #007D59; /* Warna latar belakang */
+    position: relative;
+}
+
+/* Konten utama di halaman kelima belas */
+.page-fifteen .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Judul utama dengan teks besar */
+.page-fifteen .text-container h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.2;
+    background: none;
+}
+
+/* Kotak pilihan file dengan border dan background */
+.page-fifteen .file-selector {
+    background-color: #ffffff;
+    color: #007D59;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    border: 2px solid #007D59;
+    margin-bottom: 15px; /* Jarak antara file-selector dan button */
+}
+
+/* Tombol "Open File" */
+.page-fifteen button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page-fifteen button:hover {
+    background-color: #00945E;
+}
+
+/* Dekorasi latar belakang */
+.hero.page-fifteen::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: 30%;
+    left: 10%;
+    z-index: 0;
+}
+
+.hero.page-fifteen::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 15%;
+    z-index: 0;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007D59;
+}
+/* Gaya khusus halaman keenam belas */
+.hero.page-sixteen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 90vh;
+    background-color: #007D59; /* Warna latar belakang */
+    position: relative;
+}
+
+/* Konten utama di halaman keenam belas */
+.page-sixteen .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Judul utama dengan teks besar */
+.page-sixteen .text-container h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.2;
+    background: none;
+}
+
+/* Kotak pilihan file dengan border dan background */
+.page-sixteen .file-selector {
+    background-color: #ffffff;
+    color: #007D59;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    border: 2px solid #007D59;
+    margin-bottom: 15px; /* Jarak antara file-selector dan button */
+}
+
+/* Tombol "Open File" */
+.page-sixteen button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page-sixteen button:hover {
+    background-color: #00945E;
+}
+
+/* Dekorasi latar belakang */
+.hero.page-sixteen::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: 30%;
+    left: 10%;
+    z-index: 0;
+}
+
+.hero.page-sixteen::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 15%;
+    z-index: 0;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007D59;
+}
+/* Gaya khusus halaman ketujuh belas */
+.hero.page-seventeen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 90vh;
+    background-color: #007D59; /* Warna latar belakang */
+    position: relative;
+}
+
+/* Konten utama di halaman ketujuh belas */
+.page-seventeen .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Judul utama dengan teks besar */
+.page-seventeen .text-container h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.2;
+    background: none;
+}
+
+/* Kotak pilihan file dengan border dan background */
+.page-seventeen .file-selector {
+    background-color: #ffffff;
+    color: #007D59;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    border: 2px solid #007D59;
+    margin-bottom: 15px; /* Jarak antara file-selector dan button */
+}
+
+/* Tombol "Open File" */
+.page-seventeen button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page-seventeen button:hover {
+    background-color: #00945E;
+}
+
+/* Dekorasi latar belakang */
+.hero.page-seventeen::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: 30%;
+    left: 10%;
+    z-index: 0;
+}
+
+.hero.page-seventeen::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 15%;
+    z-index: 0;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007D59;
+}
+/* Gaya khusus halaman kedelapan belas */
+.hero.page-eighteen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 90vh;
+    background-color: #007D59; /* Warna latar belakang */
+    position: relative;
+}
+
+/* Konten utama di halaman kedelapan belas */
+.page-eighteen .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Judul utama dengan teks besar */
+.page-eighteen .text-container h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.2;
+    background: none;
+}
+
+/* Kotak pilihan file dengan border dan background */
+.page-eighteen .file-selector {
+    background-color: #ffffff;
+    color: #007D59;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    border: 2px solid #007D59;
+    margin-bottom: 15px; /* Jarak antara file-selector dan button */
+}
+
+/* Tombol "Open File" */
+.page-eighteen button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page-eighteen button:hover {
+    background-color: #00945E;
+}
+
+/* Dekorasi latar belakang */
+.hero.page-eighteen::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: 30%;
+    left: 10%;
+    z-index: 0;
+}
+
+.hero.page-eighteen::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 15%;
+    z-index: 0;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007D59;
+}
+/* Gaya khusus halaman sembilan belas */
+.hero.page-nineteen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 90vh;
+    background-color: #007D59; /* Warna latar belakang */
+    position: relative;
+}
+
+/* Konten utama di halaman sembilan belas */
+.page-nineteen .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Judul utama dengan teks besar */
+.page-nineteen .text-container h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.2;
+    background: none;
+}
+
+/* Kotak pilihan file dengan border dan background */
+.page-nineteen .file-selector {
+    background-color: #ffffff;
+    color: #007D59;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    border: 2px solid #007D59;
+    margin-bottom: 15px; /* Jarak antara file-selector dan tombol */
+}
+
+/* Tombol "Open File" */
+.page-nineteen button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page-nineteen button:hover {
+    background-color: #00945E;
+}
+
+/* Dekorasi latar belakang */
+.hero.page-nineteen::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: 30%;
+    left: 10%;
+    z-index: 0;
+}
+
+.hero.page-nineteen::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 15%;
+    z-index: 0;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007D59;
+}
+/* Gaya khusus halaman dua puluh */
+.hero.page-twenty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 90vh;
+    background-color: #007D59; /* Warna latar belakang */
+    position: relative;
+}
+
+/* Konten utama di halaman dua puluh */
+.page-twenty .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Judul utama dengan teks besar */
+.page-twenty .text-container h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.2;
+    background: none;
+}
+
+/* Kotak pilihan file dengan border dan background */
+.page-twenty .file-selector {
+    background-color: #ffffff;
+    color: #007D59;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    border: 2px solid #007D59;
+    margin-bottom: 15px; /* Jarak antara file-selector dan tombol */
+}
+
+/* Tombol "Open File" */
+.page-twenty button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page-twenty button:hover {
+    background-color: #00945E;
+}
+
+/* Dekorasi latar belakang */
+.hero.page-twenty::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: 30%;
+    left: 10%;
+    z-index: 0;
+}
+
+.hero.page-twenty::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 15%;
+    z-index: 0;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007D59;
+}
+/* Gaya khusus halaman dua puluh satu */
+.hero.page-twentyone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 90vh;
+    background-color: #007D59; /* Warna latar belakang */
+    position: relative;
+}
+
+/* Konten utama di halaman dua puluh satu */
+.page-twentyone .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Judul utama dengan teks besar */
+.page-twentyone .text-container h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.2;
+    background: none;
+}
+
+/* Kotak pilihan file dengan border dan background */
+.page-twentyone .file-selector {
+    background-color: #ffffff;
+    color: #007D59;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    border: 2px solid #007D59;
+    margin-bottom: 15px; /* Jarak antara file-selector dan tombol */
+}
+
+/* Tombol "Open File" */
+.page-twentyone button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page-twentyone button:hover {
+    background-color: #00945E;
+}
+
+/* Dekorasi latar belakang */
+.hero.page-twentyone::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: 30%;
+    left: 10%;
+    z-index: 0;
+}
+
+.hero.page-twentyone::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 15%;
+    z-index: 0;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007D59;
+}
+/* Gaya khusus halaman dua puluh dua */
+.hero.page-twentytwo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 90vh;
+    background-color: #007D59; /* Warna latar belakang */
+    position: relative;
+}
+
+/* Konten utama di halaman dua puluh dua */
+.page-twentytwo .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Judul utama dengan teks besar */
+.page-twentytwo .text-container h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.2;
+    background: none;
+}
+
+/* Kotak pilihan file dengan border dan background */
+.page-twentytwo .file-selector {
+    background-color: #ffffff;
+    color: #007D59;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    border: 2px solid #007D59;
+    margin-bottom: 15px; /* Jarak antara file-selector dan tombol */
+}
+
+/* Tombol "Open File" */
+.page-twentytwo button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page-twentytwo button:hover {
+    background-color: #00945E;
+}
+
+/* Dekorasi latar belakang */
+.hero.page-twentytwo::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: 30%;
+    left: 10%;
+    z-index: 0;
+}
+
+.hero.page-twentytwo::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 15%;
+    z-index: 0;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007D59;
+}
+/* Gaya khusus halaman dua puluh tiga */
+.hero.page-twentythree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 90vh;
+    background-color: #007D59; /* Warna latar belakang */
+    position: relative;
+}
+
+/* Konten utama di halaman dua puluh tiga */
+.page-twentythree .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Judul utama dengan teks besar */
+.page-twentythree .text-container h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.2;
+    background: none;
+}
+
+/* Kotak pilihan file dengan border dan background */
+.page-twentythree .file-selector {
+    background-color: #ffffff;
+    color: #007D59;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    border: 2px solid #007D59;
+    margin-bottom: 15px; /* Jarak antara file-selector dan tombol */
+}
+
+/* Tombol "Open File" */
+.page-twentythree button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page-twentythree button:hover {
+    background-color: #00945E;
+}
+
+/* Dekorasi latar belakang */
+.hero.page-twentythree::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: 30%;
+    left: 10%;
+    z-index: 0;
+}
+
+.hero.page-twentythree::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 15%;
+    z-index: 0;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007D59;
+}
+/* Gaya khusus halaman dua puluh empat */
+.hero.page-twentyfour {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 90vh;
+    background-color: #007D59; /* Warna latar belakang */
+    position: relative;
+}
+
+/* Konten utama di halaman dua puluh empat */
+.page-twentyfour .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Judul utama dengan teks besar */
+.page-twentyfour .text-container h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.2;
+    background: none;
+}
+
+/* Kotak pilihan file dengan border dan background */
+.page-twentyfour .file-selector {
+    background-color: #ffffff;
+    color: #007D59;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    border: 2px solid #007D59;
+    margin-bottom: 15px; /* Jarak antara file-selector dan tombol */
+}
+
+/* Tombol "Open File" */
+.page-twentyfour button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00A76B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page-twentyfour button:hover {
+    background-color: #00945E;
+}
+
+/* Dekorasi latar belakang */
+.hero.page-twentyfour::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: 30%;
+    left: 10%;
+    z-index: 0;
+}
+
+.hero.page-twentyfour::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 15%;
+    z-index: 0;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007D59;
+}
+/* Gaya khusus halaman Explore Files */
+.explore-files {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #007D59;
+}
+
+.explore-files h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Grid untuk jenis file */
+.file-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 50px;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Gaya setiap tipe file */
+.file-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #00A76B;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+/* Tombol SELECT FILE */
+.select-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    background-color: #ffffff;
+    color: #007D59;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.select-button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007D59;
+}

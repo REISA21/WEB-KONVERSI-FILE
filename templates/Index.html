@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reisa Convert</title>
+    <!-- Menggunakan `url_for` untuk memastikan path CSS benar -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo-text">
+                <span>Reisa</span>
+                <span>Convert</span>
+            </h1>
+            <nav>
+                <!-- Menggunakan `url_for` untuk tautan halaman -->
+                <a href="{{ url_for('index') }}" class="nav-home">Home</a>
+                <a href="{{ url_for('explore') }}" class="nav-explore">Explore Files</a>
+            </nav>
+        </div>
+    </header>
+    <section class="hero page-one">
+        <div class="navigation-dots left">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <div class="content">
+            <div class="image-container">
+                <!-- Memperbarui path untuk gambar dengan `url_for` -->
+                <img src="{{ url_for('static', filename='images/BK1.jpg') }}" alt="File conversion">
+                <div class="logo-overlay">
+                    <img src="{{ url_for('static', filename='images/LOGO.png') }}" alt="Reisa Logo">
+                </div>
+            </div>
+            <div class="text-container">
+                <h2>Reisa Convert</h2>
+                <h3>Fast Convert All Files</h3>
+                <!-- Menggunakan `url_for` untuk tautan halaman -->
+                <a href="{{ url_for('explore') }}" class="explore-button"><button>Explore File</button></a>
+            </div>
+        </div>
+        <div class="navigation-dots right">
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </section>
+</body>
+</html>
+

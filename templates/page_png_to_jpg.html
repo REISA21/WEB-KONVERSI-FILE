@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reisa Convert - PNG to JPG</title>
+    <!-- Path CSS menggunakan `url_for` -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo-text">
+                <span>Reisa</span>
+                <span>Convert</span>
+            </h1>
+            <nav>
+                <!-- Tautan ke halaman utama dan explore -->
+                <a href="{{ url_for('index') }}" class="nav-home">Home</a>
+                <a href="{{ url_for('explore') }}" class="nav-explore">Explore Files</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero page-thirteen">
+        <div class="content">
+            <div class="text-container">
+                <h2>Convert PNG To JPG</h2>
+            </div>
+            <div class="file-selector">
+                Select the file you want to change
+            </div>
+            <button>Open File</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Reisa Convert. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

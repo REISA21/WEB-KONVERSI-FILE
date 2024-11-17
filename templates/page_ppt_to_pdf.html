@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reisa Convert - PowerPoint to PDF</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo-text">
+                <span>Reisa</span>
+                <span>Convert</span>
+            </h1>
+            <nav>
+                <a href="{{ url_for('index') }}" class="nav-home">Home</a>
+                <a href="{{ url_for('explore') }}" class="nav-explore">Explore Files</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero page-five">
+        <div class="content">
+            <div class="text-container">
+                <h2>Convert PowerPoint<br>To PDF</h2>
+            </div>
+            <div class="file-selector">
+                <!-- Input file disembunyikan dan dikaitkan dengan tombol "Open File" -->
+                <label for="pptFileInput" style="position: absolute; left: -9999px;">Upload PowerPoint File</label>
+                <input type="file" id="pptFileInput" accept=".ppt, .pptx" style="display: none;" onchange="uploadFilePPT()" title="Select a PowerPoint file to convert to PDF">
+                <button type="button" onclick="document.getElementById('pptFileInput').click()">Open File</button>
+            </div>
+            <div id="downloadLinkContainer"></div>
+        </div>
+        
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/bk2.png') }}" alt="Person thinking">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Reisa Convert. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function uploadFilePPT() {
+            const fileInput = document.getElementById('pptFileInput');
+            const formData = new FormData();
+
+            if (fileInput.files.length === 0) {
+                alert("Please select a PowerPoint file first.");
+                return;
+            }
+
+            formData.append("ppt_file", fileInput.files[0]);
+
+            fetch("/upload_ppt_to_pdf", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const downloadContainer = document.getElementById("downloadLinkContainer");
+                    downloadContainer.innerHTML = "";  // Clear previous link if any
+
+                    // Create download link
+                    const a = document.createElement("a");
+                    a.href = data.download_url;
+                    a.innerText = "Download Converted File";
+                    a.style.display = "block";
+                    a.style.marginTop = "20px";
+                    a.style.padding = "10px";
+                    a.style.backgroundColor = "#4CAF50";
+                    a.style.color = "white";
+                    a.style.textAlign = "center";
+                    a.style.textDecoration = "none";
+                    a.style.borderRadius = "5px";
+
+                    downloadContainer.appendChild(a);
+                    alert("File converted successfully");
+                } else {
+                    alert(`Error: ${data.message}`);
+                }
+            })
+            .catch(error => {
+                console.error("Error during file upload:", error);
+                alert("An error occurred while uploading the file.");
+            });
+        }
+    </script>
+</body>
+</html>
